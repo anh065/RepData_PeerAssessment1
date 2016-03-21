@@ -59,7 +59,7 @@ Produce a histogram of the total number of steps taken each day
 hist(totalSteps,breaks=11,xlab="Total number of steps per day",main="Histogram of total number of steps taken each day")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-7-1.png)
+![](PA1_template_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
 
 ## What is the average daily activity pattern?
 
@@ -81,7 +81,7 @@ Plot the numbers of steps taken per 5-minute interval averaged across all days
 plot(aveSteps$interval,aveSteps$aveSteps,type="l",main="Average number of steps per 5-min interval",xlab="Interval number",ylab="Average number of steps")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-10-1.png)
+![](PA1_template_files/figure-html/unnamed-chunk-10-1.png)<!-- -->
 
 The interval with maximum number of steps averaged across all days
 
@@ -131,7 +131,7 @@ Produce a histogram of the total number of steps taken each day
 hist(totalSteps,breaks=11,xlab="Total number of steps per day",main="Histogram of total number of steps taken each day")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-15-1.png)
+![](PA1_template_files/figure-html/unnamed-chunk-15-1.png)<!-- -->
 The mean of total number of steps taken per day
 
 ```r
@@ -195,4 +195,4 @@ plot(weekday$interval,weekday$avesteps,type="l",main="Weekday average number of\
 plot(weekend$interval,weekend$avesteps,type="l",main="Weekend average number of\n steps per 5-min interval",xlab="Interval number",ylab="Average number of steps")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-23-1.png)
+![](PA1_template_files/figure-html/unnamed-chunk-23-1.png)<!-- -->
