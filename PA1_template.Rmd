@@ -119,7 +119,7 @@ Create a vector of weekend days
 weekend <- c("Saturday","Sunday")
 ```
 
-Add a factor to the dataframe showing week days or weekend
+Add a factor to the dataframe showing week or weekend days 
 ```{r}
 impDat["wDay"] <- factor((impDat$weekday %in% weekend),levels=c(FALSE,TRUE),labels=c("weekday","weekend"))
 ```

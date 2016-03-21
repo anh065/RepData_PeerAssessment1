@@ -184,7 +184,7 @@ for(i in 1:length(levels(dat$date))) {
 <pre class="r"><code>impDat[&quot;weekday&quot;] &lt;- weekdays(as.Date(impDat$date))</code></pre>
 <p>Create a vector of weekend days</p>
 <pre class="r"><code>weekend &lt;- c(&quot;Saturday&quot;,&quot;Sunday&quot;)</code></pre>
-<p>Add a factor to the dataframe showing week days or weekend</p>
+<p>Add a factor to the dataframe showing week or weekend days</p>
 <pre class="r"><code>impDat[&quot;wDay&quot;] &lt;- factor((impDat$weekday %in% weekend),levels=c(FALSE,TRUE),labels=c(&quot;weekday&quot;,&quot;weekend&quot;))</code></pre>
 <p>Calculate the numbers of steps taken per 5-minute interval averaged across week days or weekends</p>
 <pre class="r"><code>lists &lt;- list(wDay=impDat$wDay,interval=impDat$interval)
