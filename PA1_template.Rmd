@@ -43,7 +43,7 @@ median(totalSteps)
 
 Produce a histogram of the total number of steps taken each day
 ```{r}
-hist(totalSteps,breaks=11,xlab="Total number of steps per day",main="Histogram of total number of steps taken each day")
+hist(totalSteps,xlab="Total number of steps per day",main="Histogram of total number of steps taken each day")
 ```
 
 ## What is the average daily activity pattern?
@@ -95,7 +95,7 @@ totalSteps <- tapply(impDat$steps, impDat$date, sum)
 
 Produce a histogram of the total number of steps taken each day
 ```{r}
-hist(totalSteps,breaks=11,xlab="Total number of steps per day",main="Histogram of total number of steps taken each day")
+hist(totalSteps,xlab="Total number of steps per day",main="Histogram of total number of steps taken each day")
 ```
 The mean of total number of steps taken per day
 ```{r echo=TRUE} 
@@ -139,7 +139,7 @@ weekend <- data.frame(interval=as.numeric(colnames(aveWDSteps)),avesteps=aveWDSt
 
 Make a panel plot containing a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis)
 ```{r}
-par(mfrow=c(1,2))
-plot(weekday$interval,weekday$avesteps,type="l",main="Weekday average number of\n steps per 5-min interval",xlab="Interval number",ylab="Average number of steps")
-plot(weekend$interval,weekend$avesteps,type="l",main="Weekend average number of\n steps per 5-min interval",xlab="Interval number",ylab="Average number of steps")
+par(mfrow=c(2,1),mar = c(4, 4, 1, 1))
+plot(weekday$interval,weekday$avesteps,type="l",main="Weekday",xlab="",ylab="Average number of steps")
+plot(weekend$interval,weekend$avesteps,type="l",main="Weekend",xlab="Interval number",ylab="Average number of steps")
 ```
